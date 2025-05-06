@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/manifest.json",
+      "headers": {
+        "Cache-Control": "no-store, max-age=0"
+      },
+      "dest": "/manifest.json"
+    },
+    {
+      "src": "/favicon.ico",
+      "headers": {
+        "Cache-Control": "no-store, max-age=0"
+      },
+      "dest": "/favicon.ico"
+    }
+  ]
+}
